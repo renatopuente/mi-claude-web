@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>mi-claude · Así trabajo con Claude</title>
-  <meta name="description" content="Mi forma de trabajar con Claude Code: las reglas, lo que aprendió de mí y sus herramientas, guardadas en un repo para tenerlas igual en cualquier PC." />
+  <meta name="description" content="Mi forma de trabajar con Claude Code: las reglas, lo que aprendió de mí y sus herramientas, guardadas en un repo para tenerlas igual en cualquier PC o Mac." />
   <meta property="og:title" content="mi-claude · Así trabajo con Claude" />
-  <meta property="og:description" content="Las reglas, las lecciones y las herramientas con las que Claude trabaja conmigo, listas para instalar en cualquier PC." />
+  <meta property="og:description" content="Las reglas, las lecciones y las herramientas con las que Claude trabaja conmigo, listas para instalar en cualquier PC o Mac." />
   <meta property="og:image" content="img/eloctagono.webp" />
   <meta name="theme-color" content="#0a0a0a" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -77,7 +77,7 @@ Subido a GitHub.</pre>
           </div>
         </div>
 
-        <p class="hero-bajada">mi-claude guarda mi forma de trabajar con Claude Code: las reglas, lo que aprendió de mí y sus herramientas, listas para instalar igual en cualquier PC.</p>
+        <p class="hero-bajada">mi-claude guarda mi forma de trabajar con Claude Code: las reglas, lo que aprendió de mí y sus herramientas, listas para instalar igual en cualquier PC&nbsp;o&nbsp;Mac.</p>
       </div>
     </section>
 
@@ -88,7 +88,7 @@ Subido a GitHub.</pre>
         <p class="fuerte" data-entra>No es un programa: es la manera en que Claude y yo trabajamos, escrita en archivos.</p>
         <p data-entra>Las reglas viven en un CLAUDE.md que Claude lee en cualquier carpeta: hablar en español, no publicar nada sin mi OK, comprobar antes de decir que algo está listo.</p>
         <p data-entra>Lo que aprendió de mí queda en lecciones y memorias. Cada vez que lo corrijo, la regla se escribe para que no vuelva a pasar.</p>
-        <p data-entra>Sus herramientas viajan con él: seis plugins, dieciocho skills y gstack. En una PC nueva, un script lo deja todo igual.</p>
+        <p data-entra>Sus herramientas viajan con él: seis plugins, dieciocho skills y gstack. En una PC o una Mac nueva, un script lo deja todo igual.</p>
       </div>
 
       <div class="ui repo" data-ui data-entra>
@@ -101,6 +101,8 @@ Subido a GitHub.</pre>
           <li><button type="button" class="archivo" data-archivo="ajustes"><span>settings.json</span><span>Plugins, modelo y esfuerzo</span><span>3 KB</span></button></li>
           <li><button type="button" class="archivo" data-archivo="instalar"><span>instalar.ps1</span><span>Lo pone todo en una PC nueva</span><span>7 KB</span></button></li>
           <li><button type="button" class="archivo" data-archivo="exportar"><span>exportar.ps1</span><span>Sube lo nuevo, sin nada privado</span><span>5 KB</span></button></li>
+          <li><button type="button" class="archivo" data-archivo="instalar-mac"><span>instalar.sh</span><span>Lo mismo, en una Mac nueva</span><span>6 KB</span></button></li>
+          <li><button type="button" class="archivo" data-archivo="exportar-mac"><span>exportar.sh</span><span>Lo mismo, desde la Mac</span><span>6 KB</span></button></li>
         </ul>
         <div class="repo-vista" aria-live="polite">
           <div class="extracto activo" data-extracto="claude">
@@ -131,6 +133,14 @@ Subido a GitHub.</pre>
           <div class="extracto" data-extracto="exportar">
             <p class="ext-titulo">exportar.ps1</p>
             <p>Junta lo nuevo de esta PC y, antes de subir, busca claves, tokens y correos personales. Si encuentra algo, no sube nada.</p>
+          </div>
+          <div class="extracto" data-extracto="instalar-mac">
+            <p class="ext-titulo">instalar.sh</p>
+            <p>Lo mismo que instalar.ps1, para la Mac. Si faltan jq o Bun, los instala con Homebrew, y deja las memorias en ~/Documents/Mi Claude.</p>
+          </div>
+          <div class="extracto" data-extracto="exportar-mac">
+            <p class="ext-titulo">exportar.sh</p>
+            <p>Lo mismo que exportar.ps1: junta lo nuevo de la Mac y, si encuentra una clave, un token o un correo personal, no sube nada.</p>
           </div>
         </div>
       </div>
@@ -256,6 +266,7 @@ Subido a GitHub.</pre>
             <li class="banda"><span class="b-hora">14:04</span><span class="b-texto">El hero ya no pisa la imagen en el teléfono<small>Y el clip de CS2 en Nosotros</small></span><span class="b-tipo">v3.4.3</span></li>
             <li class="banda"><span class="b-hora">14:16</span><span class="b-texto">Logo nuevo: el pulpo de gema<small>En la barra, el emblema, los íconos y la imagen para compartir</small></span><span class="b-tipo">v3.5.0</span></li>
             <li class="banda"><span class="b-hora">15:15</span><span class="b-texto">mi-claude sube a GitHub<small>Probado como si fuera una PC nueva</small></span><span class="b-tipo">Publicado</span></li>
+            <li class="banda"><span class="b-hora">16:07</span><span class="b-texto">mi-claude también en la Mac<small>instalar.sh y exportar.sh, con Homebrew</small></span><span class="b-tipo">Herramienta</span></li>
           </ol>
         </div>
       </div>
@@ -273,7 +284,14 @@ Subido a GitHub.</pre>
           </span>
         </h2>
       </form>
-      <p class="frase-nota" data-entra>Escribe la carpeta donde más abres Claude y copia los dos comandos para PowerShell. Antes: Git para Windows y Antigravity con la extensión de Claude Code, con tu sesión iniciada. Después: reinicia Antigravity. El repo es privado, así que solo funciona con mi cuenta de GitHub.</p>
+      <div class="sistemas" role="group" aria-label="Sistema" data-entra>
+        <button type="button" data-sistema="windows" aria-pressed="true">Windows</button>
+        <button type="button" data-sistema="mac" aria-pressed="false">Mac</button>
+      </div>
+      <div data-entra>
+        <p class="frase-nota" data-nota="windows">Escribe la carpeta donde más abres Claude y copia los dos comandos para PowerShell. Antes: Git para Windows y Antigravity con la extensión de Claude Code, con tu sesión iniciada. Después: reinicia Antigravity. El repo es privado, así que solo funciona con mi cuenta de GitHub.</p>
+        <p class="frase-nota" data-nota="mac" hidden>Escribe la carpeta donde más abres Claude y copia los dos comandos para la Terminal. Antes: git (<code>xcode-select --install</code>), Homebrew y Antigravity con la extensión de Claude Code, con tu sesión iniciada. Después: reinicia Antigravity. El repo es privado, así que solo funciona con mi cuenta de GitHub.</p>
+      </div>
       <pre class="comando" data-entra><code id="comando">git clone https://github.com/renatopuente/mi-claude.git
 powershell -ExecutionPolicy Bypass -File .\mi-claude\instalar.ps1</code></pre>
     </section>

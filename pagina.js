@@ -114,17 +114,33 @@
   });
   if (pestanas.length) elegir(pestanas.find((t) => t.getAttribute("aria-selected") === "true") || pestanas[0]);
 
-  // --- La frase con el hueco: la carpeta que escribes entra en el comando, y "Copiar" lo copia.
+  // --- La frase con el hueco: la carpeta que escribes entra en el comando del sistema elegido,
+  // y "Copiar" lo copia. Empieza en Mac si la visita viene de una.
   const frase = document.getElementById("frase");
   const carpeta = document.getElementById("carpeta");
   const comando = document.getElementById("comando");
   const boton = document.querySelector(".frase-boton");
+  const sistemas = [...document.querySelectorAll("[data-sistema]")];
+  const plataforma = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
+  let sistema = /mac/i.test(plataforma) ? "mac" : "windows";
   function armar() {
     const ruta = carpeta.value.trim().replace(/"/g, "");
-    comando.textContent = "git clone https://github.com/renatopuente/mi-claude.git\n" +
-      "powershell -ExecutionPolicy Bypass -File .\\mi-claude\\instalar.ps1" + (ruta ? ` -Carpeta "${ruta}"` : "");
+    // En la Mac, "~" entre comillas no se expande: se cambia por $HOME, que sí.
+    comando.textContent = sistema === "mac"
+      ? "cd ~ && git clone https://github.com/renatopuente/mi-claude.git\n" +
+        "bash ~/mi-claude/instalar.sh" + (ruta ? ` --carpeta "${ruta.replace(/^~(?=\/|$)/, "$HOME")}"` : "")
+      : "git clone https://github.com/renatopuente/mi-claude.git\n" +
+        "powershell -ExecutionPolicy Bypass -File .\\mi-claude\\instalar.ps1" + (ruta ? ` -Carpeta "${ruta}"` : "");
+  }
+  function elegirSistema(s) {
+    sistema = s;
+    sistemas.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.sistema === s)));
+    document.querySelectorAll("[data-nota]").forEach((n) => { n.hidden = n.dataset.nota !== s; });
+    armar();
   }
   if (frase) {
+    sistemas.forEach((b) => b.addEventListener("click", () => elegirSistema(b.dataset.sistema)));
+    elegirSistema(sistema);
     carpeta.addEventListener("input", armar);
     frase.addEventListener("submit", async (e) => {
       e.preventDefault();

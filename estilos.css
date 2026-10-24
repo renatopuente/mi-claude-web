@@ -272,7 +272,8 @@ a {
 
 .ui code,
 .ui pre,
-.comando {
+.comando,
+.frase-nota code {
   font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
 }
 
@@ -835,6 +836,42 @@ a {
 
 .frase-boton:hover {
   background: #c8172d;
+}
+
+/* Windows o Mac: sin script no se ve y queda el comando de Windows */
+.sistemas {
+  display: none;
+  gap: 6px;
+  margin-top: 36px;
+}
+
+.js .sistemas {
+  display: flex;
+}
+
+.sistemas button {
+  height: 40px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: var(--radio);
+  background: var(--surface);
+  color: var(--ink);
+  font: 500 var(--step-small)/1 var(--face);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.15s var(--ease);
+}
+
+.sistemas button:hover {
+  background: var(--surface-2);
+}
+
+.sistemas button:active {
+  transform: scale(0.97);
+}
+
+.sistemas button[aria-pressed="true"] {
+  background: var(--field-1);
+  color: var(--field-1-ink);
 }
 
 .frase-nota {
