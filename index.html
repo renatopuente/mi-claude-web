@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mi-claude · Así trabajo con Claude</title>
+  <meta name="description" content="Mi forma de trabajar con Claude Code: las reglas, lo que aprendió de mí y sus herramientas, guardadas en un repo para tenerlas igual en cualquier PC." />
+  <meta property="og:title" content="mi-claude · Así trabajo con Claude" />
+  <meta property="og:description" content="Las reglas, las lecciones y las herramientas con las que Claude trabaja conmigo, listas para instalar en cualquier PC." />
+  <meta property="og:image" content="img/eloctagono.webp" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="#arriba">mi-claude</a>
+    <nav class="barra-enlaces" aria-label="Secciones">
+      <a href="#que-es">Qué es</a>
+      <a href="#como">Cómo trabajamos</a>
+      <a href="#hicimos">Lo que hicimos</a>
+    </nav>
+    <a class="boton" href="#instalar">Instalar</a>
+  </header>
+
+  <main id="arriba">
+    <!-- Hero: la frase partida por un carrete de fragmentos reales de una sesión -->
+    <section class="hero" aria-labelledby="titulo">
+      <div class="hero-escena">
+        <h1 class="hero-titulo" id="titulo"><span class="mitad mitad-a">Así trabajo</span> <span class="mitad mitad-b">con Claude</span></h1>
+
+        <div class="carrete">
+          <div class="carrete-pista">
+            <figure class="cuadro">
+              <div class="ui chat" data-ui>
+                <p class="ui-cabeza">Claude Code · el logo nuevo</p>
+                <p class="globo globo-yo">Quiero el X2 y la fuente 4, Saira. ¿Qué más necesitas que te confirme?</p>
+                <p class="globo globo-claude">Nada más. Lo que decido por mi cuenta: el pulpo de cristal va grande, en la portada, los íconos y la imagen para compartir. Para el favicon dibujo una versión plana, porque a 16 px el cristal no se ve.</p>
+                <p class="globo globo-yo">publica el nuevo logo en todas sus aplicaciones</p>
+                <p class="ui-estado"><span class="punto"></span>v3.5.0 en producción · 14:16</p>
+              </div>
+            </figure>
+            <figure class="cuadro">
+              <video src="img/eloctagono-recorrido.webm" poster="img/eloctagono.webp" width="1280" height="800" autoplay muted loop playsinline aria-label="Un recorrido por la portada de eloctagono.online, con el logo nuevo"></video>
+            </figure>
+            <figure class="cuadro">
+              <div class="ui terminal" data-ui>
+                <p class="ui-cabeza">verificar 17 páginas · producción</p>
+<pre>index.html             desborde 0px  errores []
+duelos-view.html       desborde 0px  errores []
+ranking.html           desborde 0px  errores []
+quienes-somos.html     desborde 0px  errores []
+temporada-actual.html  desborde 0px  errores []
+… y 12 páginas más, igual
+captura para compartir: 700 x 1068 · errores []</pre>
+              </div>
+            </figure>
+            <figure class="cuadro">
+              <img src="img/ramps.webp" width="1200" height="675" alt="La portada del mapa awp_dust_ramps de CS2, con el título RAMPS en neón" />
+            </figure>
+            <figure class="cuadro">
+              <div class="ui terminal" data-ui>
+                <p class="ui-cabeza">exportar.ps1 · antes de subir a GitHub</p>
+<pre>  skills: 18
+  memorias: idioma-espanol.md, claude-cli-ruta.md …
+
+No subo nada: encontré datos que parecen privados:
+  skills\cyber-neo\…\secrets-patterns.md
+
+(era un patrón de búsqueda, no una clave: arreglado)
+Subido a GitHub.</pre>
+              </div>
+            </figure>
+          </div>
+        </div>
+
+        <p class="hero-bajada">mi-claude guarda mi forma de trabajar con Claude Code: las reglas, lo que aprendió de mí y sus herramientas, listas para instalar igual en cualquier PC.</p>
+      </div>
+    </section>
+
+    <!-- Qué es: la columna estrecha junto al repo -->
+    <section class="seccion que-es" id="que-es" aria-labelledby="que-es-titulo">
+      <div class="que-es-texto">
+        <h2 class="titulo-seccion" id="que-es-titulo" data-entra>Qué es</h2>
+        <p class="fuerte" data-entra>No es un programa: es la manera en que Claude y yo trabajamos, escrita en archivos.</p>
+        <p data-entra>Las reglas viven en un CLAUDE.md que Claude lee en cualquier carpeta: hablar en español, no publicar nada sin mi OK, comprobar antes de decir que algo está listo.</p>
+        <p data-entra>Lo que aprendió de mí queda en lecciones y memorias. Cada vez que lo corrijo, la regla se escribe para que no vuelva a pasar.</p>
+        <p data-entra>Sus herramientas viajan con él: seis plugins, dieciocho skills y gstack. En una PC nueva, un script lo deja todo igual.</p>
+      </div>
+
+      <div class="ui repo" data-ui data-entra>
+        <p class="ui-cabeza">renatopuente / mi-claude · privado</p>
+        <ul class="repo-archivos" role="list">
+          <li><button type="button" class="archivo activo" data-archivo="claude"><span>CLAUDE.md</span><span>Reglas y «Cómo trabajamos»</span><span>6 KB</span></button></li>
+          <li><button type="button" class="archivo" data-archivo="lecciones"><span>lecciones.md</span><span>Ocho errores con su regla</span><span>2 KB</span></button></li>
+          <li><button type="button" class="archivo" data-archivo="memoria"><span>memoria/</span><span>Lo que sabe de mí</span><span>6</span></button></li>
+          <li><button type="button" class="archivo" data-archivo="skills"><span>skills/</span><span>Skills propias</span><span>18</span></button></li>
+          <li><button type="button" class="archivo" data-archivo="ajustes"><span>settings.json</span><span>Plugins, modelo y esfuerzo</span><span>3 KB</span></button></li>
+          <li><button type="button" class="archivo" data-archivo="instalar"><span>instalar.ps1</span><span>Lo pone todo en una PC nueva</span><span>7 KB</span></button></li>
+          <li><button type="button" class="archivo" data-archivo="exportar"><span>exportar.ps1</span><span>Sube lo nuevo, sin nada privado</span><span>5 KB</span></button></li>
+        </ul>
+        <div class="repo-vista" aria-live="polite">
+          <div class="extracto activo" data-extracto="claude">
+            <p class="ext-titulo">CLAUDE.md · Permisos</p>
+            <p>Publicar, hacer push o pasar a producción solo con un OK explícito del usuario para ese cambio. Cuando lo da, hacerlo cuanto antes y comprobar en vivo que quedó.</p>
+            <p>Contraseñas, códigos de un solo uso y datos de pago los escribe el usuario; nunca pasan por mí.</p>
+          </div>
+          <div class="extracto" data-extracto="lecciones">
+            <p class="ext-titulo">lecciones.md · Términos de un género</p>
+            <p>El usuario pidió «crípticos» y entregué dos veces otra cosa. Cuando el usuario usa un término de un género, abrir un sitio de ese género antes de diseñar.</p>
+          </div>
+          <div class="extracto" data-extracto="memoria">
+            <p class="ext-titulo">memoria/idioma-espanol.md</p>
+            <p>Escribir siempre en español: la respuesta final y también cada mensaje corto que acompaña una herramienta. El usuario los ve todos.</p>
+          </div>
+          <div class="extracto" data-extracto="skills">
+            <p class="ext-titulo">skills/</p>
+            <p>abogado-del-diablo, all-deploy, animate, animate-expo, animation-performance, animation-vocabulary, apple-design, ask-sonner, break-ui, cyber-neo, emil-design-eng, find-animation-opportunities, improve-animations, mobile-native, pick-ui-library, prototype, review-animations, write-swift.</p>
+          </div>
+          <div class="extracto" data-extracto="ajustes">
+            <p class="ext-titulo">settings.json</p>
+            <p>superpowers, mattpocock-skills, the-architect, claude-db, aprende y taste-skill, cada uno con el repo de donde se instala. Modelo Opus, esfuerzo xhigh.</p>
+          </div>
+          <div class="extracto" data-extracto="instalar">
+            <p class="ext-titulo">instalar.ps1</p>
+            <p>Guarda una copia de lo que había, copia las reglas y las memorias, mezcla los ajustes, instala los plugins con el Claude de Antigravity y deja gstack listo.</p>
+          </div>
+          <div class="extracto" data-extracto="exportar">
+            <p class="ext-titulo">exportar.ps1</p>
+            <p>Junta lo nuevo de esta PC y, antes de subir, busca claves, tokens y correos personales. Si encuentra algo, no sube nada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo trabajamos: la sesión queda fija y cambia con cada frase -->
+    <section class="seccion como" id="como" aria-labelledby="como-titulo">
+      <h2 class="titulo-seccion como-titulo" id="como-titulo" data-entra>Cómo trabajamos</h2>
+      <div class="como-texto">
+        <div class="paso activo" data-paso="1">
+          <p class="paso-frase">Primero, pides como hablas.</p>
+          <p class="paso-nota">Una frase, sin plantillas. Leo qué quieres, lo reproduzco y digo en una línea lo que decidí por mi cuenta.</p>
+        </div>
+        <div class="paso" data-paso="2">
+          <p class="paso-frase">Después lo construyo y lo compruebo.</p>
+          <p class="paso-nota">Capturas en Chrome a cinco anchos, cero desbordes, cero errores. Si una prueba falla, busco la causa, no el síntoma.</p>
+        </div>
+        <div class="paso" data-paso="3">
+          <p class="paso-frase">Al final, publico solo con tu OK.</p>
+          <p class="paso-nota">Cuando lo dices, sale rápido y lo reviso en producción. Si me equivoqué en el camino, queda una lección escrita.</p>
+        </div>
+      </div>
+
+      <div class="como-escenario">
+        <div class="ui sesion" data-ui data-estado="1">
+          <p class="ui-cabeza">Claude Code · el hero en el celular</p>
+          <div class="estado" data-estado-de="1">
+            <p class="globo globo-yo">en mobile vi que el hero se monta sobre la imagen</p>
+            <p class="globo globo-claude">Lo reproduzco en el celular antes de tocar nada: 360, 390, 430 y 768 px.</p>
+            <p class="globo globo-claude">La causa: la ficha tiene <code>margin-top: -24px</code> a propósito. La separo con el mismo hueco que en escritorio.</p>
+          </div>
+          <div class="estado" data-estado-de="2">
+            <table class="medidas">
+              <caption>Imagen y emblema, en píxeles desde arriba</caption>
+              <thead><tr><th scope="col">Ancho</th><th scope="col">Imagen termina</th><th scope="col">Emblema empieza</th><th scope="col">Hueco</th></tr></thead>
+              <tbody>
+                <tr><td>360</td><td>446</td><td>546</td><td>100</td></tr>
+                <tr><td>390</td><td>477</td><td>577</td><td>100</td></tr>
+                <tr><td>430</td><td>519</td><td>619</td><td>100</td></tr>
+                <tr><td>768</td><td>564</td><td>664</td><td>100</td></tr>
+              </tbody>
+            </table>
+            <p class="ui-estado"><span class="punto"></span>17 páginas · desborde 0 px · errores 0</p>
+          </div>
+          <div class="estado" data-estado-de="3">
+            <p class="globo globo-yo">listo? pasa a producción cuanto antes</p>
+            <p class="globo globo-claude">Publicado: v3.4.3 (1742692). Revisé las 17 páginas en producción, sin errores.</p>
+            <p class="leccion"><strong>Lección nueva</strong> Antes de creer un error que reporta una prueba, revisar la prueba: una URL con una barra de más dio 404.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lo que hicimos: el libro de proyectos con la vista al costado -->
+    <section class="seccion hicimos" id="hicimos" aria-labelledby="hicimos-titulo">
+      <div class="libro">
+        <h2 class="titulo-seccion" id="hicimos-titulo" data-entra>Lo que hicimos</h2>
+        <ul class="filas" role="list" data-entra>
+          <li>
+            <img class="fila-foto" src="img/eloctagono.webp" width="1440" height="900" alt="" loading="lazy" />
+            <a class="fila activa" href="https://eloctagono.online" data-foto="img/eloctagono.webp" data-alt="La portada de eloctagono.online"><span class="f-nombre">eloctagono.online</span><span class="f-tipo">Rediseño de las 17 páginas, v3.1 a v3.5</span><span class="f-fecha">23–24 oct</span></a>
+          </li>
+          <li>
+            <img class="fila-foto contener" src="img/pulpo-gema.webp" width="323" height="300" alt="" loading="lazy" />
+            <a class="fila" href="https://eloctagono.online" data-foto="img/pulpo-gema.webp" data-alt="El pulpo de gema, el logo de cristal" data-contener><span class="f-nombre">El pulpo de gema</span><span class="f-tipo">Logo nuevo con Gemini, en vector y PNG</span><span class="f-fecha">24 oct</span></a>
+          </li>
+          <li>
+            <img class="fila-foto" src="img/ramps.webp" width="1200" height="675" alt="" loading="lazy" />
+            <a class="fila" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3823256672" data-foto="img/ramps.webp" data-alt="La portada del mapa awp_dust_ramps"><span class="f-nombre">awp_dust_ramps</span><span class="f-tipo">Mapa de CS2 hecho por código, en el Workshop</span><span class="f-fecha">22 oct</span></a>
+          </li>
+          <li>
+            <a class="fila" href="https://eloctagono.online/temporada-actual.html" data-foto="img/manhattan.webp" data-alt="El arte de la temporada Manhattan Amatista"><span class="f-nombre">Leyendas de temporada</span><span class="f-tipo">Escenas y arte con Gemini, hasta 2028</span><span class="f-fecha">24 oct</span></a>
+          </li>
+          <li>
+            <a class="fila" href="https://eloctagono.online" data-foto="img/pulpos.webp" data-alt="Cinco pulpos operadores con casco y rifle" data-contener><span class="f-nombre">Los modos del torneo</span><span class="f-tipo">Un mismo pulpo operador en tres escenas</span><span class="f-fecha">24 oct</span></a>
+          </li>
+          <li>
+            <a class="fila" href="https://eloctagono.online" data-foto="img/logo-hoja.webp" data-alt="La hoja con todas las versiones del logo"><span class="f-nombre">Las versiones del logo</span><span class="f-tipo">Horizontal, vertical, blanco, negro e íconos</span><span class="f-fecha">24 oct</span></a>
+          </li>
+          <li>
+            <a class="fila" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3823256672" data-foto="img/ramps-pista.webp" data-alt="La pista del mapa, con rampas y coberturas de Dust2"><span class="f-nombre">La pista de RAMPS</span><span class="f-tipo">Rampas, bloques y coberturas de Dust2</span><span class="f-fecha">22 oct</span></a>
+          </li>
+        </ul>
+        <figure class="vista" aria-hidden="true">
+          <img src="img/eloctagono.webp" width="1440" height="900" alt="" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Tres días de trabajo: pestañas por día y bandas por hora -->
+    <section class="seccion dias" id="dias" aria-labelledby="dias-titulo">
+      <div class="dias-cabeza">
+        <h2 class="titulo-grande" id="dias-titulo" data-entra><span class="suave">Tres días,</span> <span>hora por hora</span></h2>
+        <a class="boton" href="#instalar" data-entra>Instalar</a>
+      </div>
+      <div class="dias-cuerpo" data-entra>
+        <div class="pestanas" role="tablist" aria-label="Días">
+          <button type="button" role="tab" id="tab-22" aria-controls="dia-22" aria-selected="false"><span>Miércoles</span><span>22 oct</span></button>
+          <button type="button" role="tab" id="tab-23" aria-controls="dia-23" aria-selected="false"><span>Jueves</span><span>23 oct</span></button>
+          <button type="button" role="tab" id="tab-24" aria-controls="dia-24" aria-selected="true"><span>Viernes</span><span>24 oct</span></button>
+        </div>
+        <div class="agendas">
+          <ol class="agenda" id="dia-22" role="tabpanel" aria-labelledby="tab-22">
+            <li class="banda"><span class="b-hora">18:17</span><span class="b-texto">Zona de compra toda la ronda<small>T con AK y CT con M4 al aparecer</small></span><span class="b-tipo">Nuevo</span></li>
+            <li class="banda"><span class="b-hora">18:20</span><span class="b-texto">Portada con el título RAMPS en neón<small>Cian y morado, para el Workshop</small></span><span class="b-tipo">Nuevo</span></li>
+            <li class="banda"><span class="b-hora">19:14</span><span class="b-texto">CS2 se cerraba al cargar el mapa<small>La versión 1.41.9.2 rompió el equipo inicial: arreglado y anotado como lección</small></span><span class="b-tipo">Arreglo</span></li>
+            <li class="banda"><span class="b-hora">19:58</span><span class="b-texto">Chaleco, cajas con lona, ventanas que se rompen<small>Cajas de madera de Dust2 y créditos en zonas oscuras</small></span><span class="b-tipo">Nuevo</span></li>
+            <li class="banda"><span class="b-hora">20:59</span><span class="b-texto">Puertas que retroceden si atrapan a alguien<small>Antes dejaban al jugador encerrado</small></span><span class="b-tipo">Arreglo</span></li>
+            <li class="banda"><span class="b-hora">21:24</span><span class="b-texto">Avisos del Map Check resueltos<small>Zonas de compra y límites del radar</small></span><span class="b-tipo">Arreglo</span></li>
+            <li class="banda"><span class="b-hora">22:03</span><span class="b-texto">Actualización 1 publicada en el Workshop<small>Con el OK, después de probarla</small></span><span class="b-tipo">Publicado</span></li>
+          </ol>
+          <ol class="agenda" id="dia-23" role="tabpanel" aria-labelledby="tab-23">
+            <li class="banda"><span class="b-hora">11:07</span><span class="b-texto">Skills de diseño instaladas<small>taste-skill y las de Emil Kowalski; impeccable no, por sus hooks globales</small></span><span class="b-tipo">Herramienta</span></li>
+            <li class="banda"><span class="b-hora">12:28</span><span class="b-texto">Portada nueva con tablero en vivo<small>eloctagono.online, con la franja de la temporada</small></span><span class="b-tipo">v3.1.0</span></li>
+            <li class="banda"><span class="b-hora">20:10</span><span class="b-texto">El resto del sitio, logo y crípticos<small>Las 17 páginas con el mismo lenguaje</small></span><span class="b-tipo">v3.2.0</span></li>
+          </ol>
+          <ol class="agenda" id="dia-24" role="tabpanel" aria-labelledby="tab-24">
+            <li class="banda"><span class="b-hora">08:48</span><span class="b-texto">Temporadas en español y borde de gema<small>Manhattan Amatista, Ibiza Topacio, Osaka Rubí…</small></span><span class="b-tipo">v3.2.1</span></li>
+            <li class="banda"><span class="b-hora">10:40</span><span class="b-texto">Cintas de temporada y modos nuevos<small>Imágenes del pulpo operador con Gemini</small></span><span class="b-tipo">v3.3.0</span></li>
+            <li class="banda"><span class="b-hora">11:16</span><span class="b-texto">Aviso de conexión y leyendas de 2027<small>Y la vinculación de cuentas, arreglada</small></span><span class="b-tipo">v3.4.0</span></li>
+            <li class="banda"><span class="b-hora">12:07</span><span class="b-texto">Todo en español, también los avisos<small>Una corrección de una palabra que quedó como regla</small></span><span class="b-tipo">Lección</span></li>
+            <li class="banda"><span class="b-hora">12:08</span><span class="b-texto">Botones con marco de vidrio<small>Con actuaria.com como referencia</small></span><span class="b-tipo">v3.4.2</span></li>
+            <li class="banda"><span class="b-hora">14:04</span><span class="b-texto">El hero ya no pisa la imagen en el teléfono<small>Y el clip de CS2 en Nosotros</small></span><span class="b-tipo">v3.4.3</span></li>
+            <li class="banda"><span class="b-hora">14:16</span><span class="b-texto">Logo nuevo: el pulpo de gema<small>En la barra, el emblema, los íconos y la imagen para compartir</small></span><span class="b-tipo">v3.5.0</span></li>
+            <li class="banda"><span class="b-hora">15:15</span><span class="b-texto">mi-claude sube a GitHub<small>Probado como si fuera una PC nueva</small></span><span class="b-tipo">Publicado</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instalar: la frase con un hueco, que arma el comando -->
+    <section class="seccion instalar" id="instalar" aria-labelledby="instalar-titulo">
+      <form class="frase" id="frase" data-entra>
+        <h2 class="frase-titulo" id="instalar-titulo">
+          <span class="frase-linea">Instálalo en</span>
+          <span class="frase-linea">
+            <label class="oculto" for="carpeta">Carpeta donde más abres Claude</label>
+            <input id="carpeta" name="carpeta" type="text" placeholder="tu carpeta" autocomplete="off" spellcheck="false" />
+            <button type="submit" class="frase-boton">Copiar</button>
+          </span>
+        </h2>
+      </form>
+      <p class="frase-nota" data-entra>Escribe la carpeta donde más abres Claude y copia los dos comandos para PowerShell. Antes: Git para Windows y Antigravity con la extensión de Claude Code, con tu sesión iniciada. Después: reinicia Antigravity. El repo es privado, así que solo funciona con mi cuenta de GitHub.</p>
+      <pre class="comando" data-entra><code id="comando">git clone https://github.com/renatopuente/mi-claude.git
+powershell -ExecutionPolicy Bypass -File .\mi-claude\instalar.ps1</code></pre>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <span>mi-claude, la forma en que trabajo con Claude</span>
+    <nav class="pie-enlaces" aria-label="Enlaces">
+      <a href="https://eloctagono.online">eloctagono.online</a>
+      <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3823256672">awp_dust_ramps</a>
+      <a href="https://github.com/renatopuente">GitHub</a>
+    </nav>
+    <span>Renato Puente · 2026</span>
+  </footer>
+
+  <script src="pagina.js" defer></script>
+</body>
+</html>
