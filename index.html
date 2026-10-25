@@ -230,17 +230,18 @@ Subido a GitHub.</pre>
       </div>
     </section>
 
-    <!-- Tres días de trabajo: pestañas por día y bandas por hora -->
+    <!-- Cuatro días de trabajo: pestañas por día y bandas por hora -->
     <section class="seccion dias" id="dias" aria-labelledby="dias-titulo">
       <div class="dias-cabeza">
-        <h2 class="titulo-grande" id="dias-titulo" data-entra><span class="suave">Tres días,</span> <span>hora por hora</span></h2>
+        <h2 class="titulo-grande" id="dias-titulo" data-entra><span class="suave">Cuatro días,</span> <span>hora por hora</span></h2>
         <a class="boton" href="#instalar" data-entra>Instalar</a>
       </div>
       <div class="dias-cuerpo" data-entra>
         <div class="pestanas" role="tablist" aria-label="Días">
           <button type="button" role="tab" id="tab-22" aria-controls="dia-22" aria-selected="false"><span>Miércoles</span><span>22 oct</span></button>
           <button type="button" role="tab" id="tab-23" aria-controls="dia-23" aria-selected="false"><span>Jueves</span><span>23 oct</span></button>
-          <button type="button" role="tab" id="tab-24" aria-controls="dia-24" aria-selected="true"><span>Viernes</span><span>24 oct</span></button>
+          <button type="button" role="tab" id="tab-24" aria-controls="dia-24" aria-selected="false"><span>Viernes</span><span>24 oct</span></button>
+          <button type="button" role="tab" id="tab-25" aria-controls="dia-25" aria-selected="true"><span>Domingo</span><span>25 oct</span></button>
         </div>
         <div class="agendas">
           <ol class="agenda" id="dia-22" role="tabpanel" aria-labelledby="tab-22">
@@ -267,6 +268,18 @@ Subido a GitHub.</pre>
             <li class="banda"><span class="b-hora">14:16</span><span class="b-texto">Logo nuevo: el pulpo de gema<small>En la barra, el emblema, los íconos y la imagen para compartir</small></span><span class="b-tipo">v3.5.0</span></li>
             <li class="banda"><span class="b-hora">15:15</span><span class="b-texto">mi-claude sube a GitHub<small>Probado como si fuera una PC nueva</small></span><span class="b-tipo">Publicado</span></li>
             <li class="banda"><span class="b-hora">16:07</span><span class="b-texto">mi-claude también en la Mac<small>instalar.sh y exportar.sh, con Homebrew</small></span><span class="b-tipo">Herramienta</span></li>
+          </ol>
+          <ol class="agenda" id="dia-25" role="tabpanel" aria-labelledby="tab-25">
+            <li class="banda"><span class="b-hora">10:58</span><span class="b-texto">Gemini no respondía (503), dos veces seguidas<small>Leí yo mismo los límites del plan gratis de LiveKit, en su documentación</small></span><span class="b-tipo">Lección</span></li>
+            <li class="banda"><span class="b-hora">11:20</span><span class="b-texto">LiveKit Cloud: 5.000 minutos gratis al mes, tope duro<small>Por eso la voz entra con un botón; no se conecta sola</small></span><span class="b-tipo">Nuevo</span></li>
+            <li class="banda"><span class="b-hora">11:50</span><span class="b-texto">Compilado el servidor de LiveKit, en la Mac<small>No hay binario para Mac: Go 1.27.2 y su código fuente, versión 1.13.8</small></span><span class="b-tipo">Herramienta</span></li>
+            <li class="banda"><span class="b-hora">12:40</span><span class="b-texto">Token y firma de webhooks, sin el SDK de LiveKit<small>El mismo estilo que ya usaba el proyecto para sus notificaciones</small></span><span class="b-tipo">Nuevo</span></li>
+            <li class="banda"><span class="b-hora">13:15</span><span class="b-texto">Vaciado de producción, a pedido<small>Dos Casas de prueba, usuarios y fotos; la cuenta de Google, intacta</small></span><span class="b-tipo">Hecho</span></li>
+            <li class="banda"><span class="b-hora">14:05</span><span class="b-texto">Mantener presionado, una voz a la vez<small>Si dos hablan al mismo tiempo, cede el de identidad mayor, sin servidor</small></span><span class="b-tipo">Nuevo</span></li>
+            <li class="banda"><span class="b-hora">14:23</span><span class="b-texto">152 pruebas en verde, con dos navegadores de verdad<small>Entra, se ve sin conectarse, "Habla Ana" al otro lado</small></span><span class="b-tipo">Publicado</span></li>
+            <li class="banda"><span class="b-hora">14:50</span><span class="b-texto">Un cierre (closure) viejo tapaba la regla de la voz<small>El manejador de LiveKit se registra una vez, con el estado de ese momento: pasa a una ref</small></span><span class="b-tipo">Lección</span></li>
+            <li class="banda"><span class="b-hora">15:07</span><span class="b-texto">Proyecto en LiveKit Cloud, creado en el navegador<small>Clave, secreto en el administrador de secretos, webhook a la Function</small></span><span class="b-tipo">Nuevo</span></li>
+            <li class="banda"><span class="b-hora">15:08</span><span class="b-texto">Voz publicada en producción<small>Reglas, Functions y Hosting; cada endpoint probado</small></span><span class="b-tipo">Publicado</span></li>
           </ol>
         </div>
       </div>
